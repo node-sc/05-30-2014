@@ -1,1 +1,193 @@
-<h1>What is node</h1>
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Node.SC - 05-30-2014 Meeting</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+    <link rel="stylesheet" href="../reveal/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '../reveal/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="../lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- What is Node.js -->
+        <section>
+          <h2>What is Node.js?</h2>
+        </section>
+
+        <!-- Quote -->
+        <section>
+          <img class="plain" src="../images/node.svg" height="100">
+          <blockquote>
+            Node.js is a platform built on <strong>Chrome's JavaScript runtime</strong> for easily building fast, <strong>scalable network applications</strong>. Node.js uses an <strong>event-driven, non-blocking I/O model</strong> that makes it lightweight and efficient, perfect for data-intensive <strong>real-time</strong> applications that run across <strong>distributed</strong> devices.
+          </blockquote>
+        </section>
+
+        <!-- Javascript -->
+        <section>
+          <h2>Node.js is <em>Javascript</em></h2>
+          <h5>Example: A Web Server</h5>
+          <pre><code>var http = require('http');
+
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(1337, '127.0.0.1');
+
+console.log('Server running at http://127.0.0.1:1337/');</code></pre>
+        </section>
+
+        <!-- Cross-Platform -->
+        <section>
+          <h2>Node.js is <em>Cross Platform</em></h2>
+          <ul>
+            <li>Windows</li>
+            <li>Mac OS X</li>
+            <li>Linux/SunOS</li>
+            <li>Arm (Raspberry Pi)</li>
+            <li>Arduino</li>
+            <li>...</li>
+          </ul>
+        </section>
+
+        <!-- Multi-Purpose -->
+        <section>
+          <h2>Node.js is <em>Multi-Purpose</em></h2>
+          <ul>
+            <li>Web Servers / REST API Servers</li>
+            <li>Build Systems (Grunt, Gulp, etc)</li>
+            <li>Desktop Applications (node-webkit)</li>
+            <li>Command-line Applications</li>
+            <li>Robots!</li>
+            <li>...</li>
+            <li>Karaoke?</li>
+          </ul>
+        </section>
+
+        <!-- Community -->
+        <section>
+          <h2>Node.js is <em>Community</em></h2>
+          <img class="plain" src="../images/npm.png" height="50"><br />
+          <img src="../images/npm-stats.png">
+        </section>
+
+        <!-- Community: 2 -->
+        <section>
+          <img src="../images/modulecounts.png">
+          <p>http://modulecounts.com/</p>
+        </section>
+
+        <!-- Big-Time -->
+        <section>
+          <h2>Node.js is <em>Big-Time</em></h2>
+          <ul class="inline-list logos">
+            <li><img src="../images/ebay.png"></li>
+            <li><img src="../images/linkedin.png"></li>
+            <li><img src="../images/microsoft.png"></li>
+            <li><img src="../images/paypal.png"></li>
+            <li><img src="../images/wallmart.png"></li>
+            <li><img src="../images/yahoo.png"></li>
+            <li>1,000s more...</li>
+          </ul>
+        </section>
+
+        <!-- Fun -->
+        <section>
+          <h2>Node.js is <em>Fun</em></h2>
+        </section>
+
+        <!-- Fun: 1 -->
+        <section>
+          <img src="../images/game.png">
+        </section>
+
+        <!-- Fun: 2 -->
+        <section>
+          <img src="../images/robot.png" height="250">
+          <pre><code data-trim>
+var five = require("johnny-five"),
+    board = new five.Board();
+
+board.on("ready", function() {
+
+  // Create an Led on pin 13 and strobe it on/off
+  // Optionally set the speed; defaults to 100ms
+  (new five.Led(13)).strobe();
+
+});
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Learn More</h2>
+          <ul>
+            <li>nodejs.org</li>
+            <li>http://courseware.codeschool.com/node_slides.pdf</li>
+            <li>http://nodeschool.io/</li>
+          </ul>
+        </section>
+
+      </div> <!-- /slides -->
+    </div> <!-- /reveal -->
+
+    <script src="../reveal/lib/js/head.min.js"></script>
+    <script src="../reveal/js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'slide', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: '../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+
+  </body>
+</html>
