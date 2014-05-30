@@ -1,0 +1,19 @@
+{
+  "name": "05-30-2014",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Slides for 05-30-2014 NodeSantaCruz Meetup",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/node-sc/05-30-2014"
+  },
+  "homepage": "https://github.com/node-sc/05-30-2014/tree/gh-pages",
+  "dependencies": {
+    "buffet": "^1.0.0"
+  }
+}
