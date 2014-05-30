@@ -1,6 +1,8 @@
 Slides for 05-30-2014
 =====================
 
+Index: http://node-sc.github.com/05-30-2014
+
 General Meeting Slides
 ----------------------
 
